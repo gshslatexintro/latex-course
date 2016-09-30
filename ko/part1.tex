@@ -2,7 +2,7 @@
 
 \input{preamble.tex}
 
-\subtitle{Part 1: The Basics}
+\subtitle{제 1강: 기초}
 
 \begin{document}
 
@@ -16,21 +16,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Why \LaTeX{}?}
+\begin{frame}{\LaTeX{}을 사용하는 이유?}
 \begin{itemize}
-\item It makes beautiful documents
+\item 깔끔한 문서를 만든다.
 \begin{itemize}
-\item Especially mathematics
+\item 특히 수학에서
 \end{itemize}
 %
-\item It was created by scientists, for scientists
+\item 과학자들에 의해, 과학자들을 위해 만들어졌다.
 \begin{itemize}
-\item A large and active community
+\item 활동적인 큰 규모의 공동체
 \end{itemize}
 %
-\item It is powerful --- you can extend it
+\item 여기저기에 확장시킬 수 있을 정도로 강력
 \begin{itemize}
-\item Packages for papers, presentations, spreadsheets, \ldots
+\item 논문, 발표자료, 스프레드시트, \ldots 을 위한 패키지들
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -38,35 +38,35 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{How does it work?}
+\begin{frame}[fragile]{작동 방식?}
 \begin{itemize}
-\item You write your document in \texttt{plain text} with \cmd{commands} that
-describe its structure and meaning.
-\item The \texttt{latex} program processes your text and commands to produce a
-beautifully formatted document.
+\item \texttt{순수 텍스트} 및 문서의 구조와 의미를 나타내는 \cmd{명령어}로
+이루어진 문서를 작성하면 된다.
+\item \texttt{latex} 프로그램은 작성된 문서의 텍스트와 명령어를 처리하여,
+깔끔한 형태의 문서를 만든다.
 \end{itemize}
 \vskip 2ex
 \begin{center}
 \begin{minted}[frame=single]{latex}
-The rain in Spain falls \emph{mainly} on the plain.
+동해물과 백두산이 \emph{마르고} 닳도록
 \end{minted}
 \vskip 2ex
 \tikz\node[single arrow,fill=gray,font=\ttfamily\bfseries,%
   rotate=270,xshift=-1em]{latex};
 \vskip 2ex
-\fbox{The rain in Spain falls \emph{mainly} on the plain.}
+\fbox{동해물과 백두산이 \emph{마르고} 닳도록}
 \end{center}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{More examples of commands and their output\ldots}
+\begin{frame}[fragile]{명령어와 결과물에 관한 또 다른 예시들\ldots}
 \begin{exampletwoup}
 \begin{itemize}
-\item Tea
-\item Milk
-\item Biscuits
+\item 차
+\item 우유
+\item 비스킷
 \end{itemize}
 \end{exampletwoup}
 \vskip 2ex
@@ -88,33 +88,34 @@ The rain in Spain falls \emph{mainly} on the plain.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Attitude adjustment}
+\begin{frame}[fragile]{태도 변화}
 
 \begin{itemize}
-\item Use commands to describe `what it is', not `how it looks'.
-\item Focus on your content.
-\item Let \LaTeX{} do its job.
+\item `어떻게 보이는지'가 아닌 `어떤 것인지'를 설명하기 위해 명령어 사용
+\item 내용에 집중하라.
+\item \LaTeX{}이 `어떻게 보이는지'에 관한 일을 하게끔 하라.
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{The Basics}
+\section{기초}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Getting started}
+\subsection{시작하기}
 \begin{frame}[fragile]{\insertsubsection}
 \begin{itemize}
-\item A minimal \LaTeX{} document:
+\item 최소의 \LaTeX{} 문서:
 \inputminted[frame=single]{latex}{basics.tex}
-\item Commands start with a \emph{backslash} \keystrokebftt{\bs}.
-\item Every document starts with a \cmdbs{documentclass} command.
-\item The \emph{argument} in curly braces \keystrokebftt{\{} \keystrokebftt{\}} tells \LaTeX{} what kind of document we are creating: an \bftt{article}.
-\item A percent sign \keystrokebftt{\%} starts a \emph{comment} --- \LaTeX{}
-will ignore the rest of the line.
+\item 모든 명령어는 \emph{backslash} \keystrokebftt{\bs} 로 시작한다.
+\item 모든 문서는 \cmdbs{documentclass} 로 시작한다.
+\item 중괄호 \keystrokebftt{\{} \keystrokebftt{\}} 안의 \emph{argument}는
+우리가 어떤 종류의 문서를 만드는 것인지 \LaTeX{} 에게 알려준다: 이 경우 \bftt{article}.
+\item 퍼센트 기호 \keystrokebftt{\%} 는 \emph{주석}이다 --- \LaTeX{}은
+주석 뒷부분의 텍스트를 모두 무시한다.
 \end{itemize}
 \end{frame}
 
@@ -123,42 +124,43 @@ will ignore the rest of the line.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsubsection{} with \wllogo}
 \begin{itemize}
-\item Overleaf is a website for writing documents in \LaTeX.
-\item It `compiles' your \LaTeX{} automatically to show you the results.
+\item Overleaf 는 \LaTeX 으로 문서를 작성하는 웹사이트다.
+\item 이는 \LaTeX{} 을 자동으로 조판하여 결과를 보여준다.
 \vskip 2em
 \begin{center}
 \fbox{\href{\wlnewdoc{basics.tex}}{%
-Click here to open the example document in \wllogo{}}}
+\wllogo{}에서 예시 문서를 열기 위해 이곳을 누르시오}}
 \\[1ex]\scriptsize{}
-For best results, please use \href{http://www.google.com/chrome}{Google Chrome} or a recent \href{http://www.mozilla.org/en-US/firefox/new/}{FireFox}.
+최선의 품질을 위해, \href{http://www.google.com/chrome}{Google Chrome}
+또는 최신의 \href{http://www.mozilla.org/en-US/firefox/new/}{FireFox} 브라우저를 사용해 주십시오.
 \end{center}
 \vskip 2ex
-\item As we go through the following slides, try out the examples by typing them
-into the example document on Overleaf.
-\item \textbf{No really, you should try them out as we go!}
+\item 다음의 슬라이드들을 보며, Overleaf에서 예시 문서를 열어
+그 예시들을 직접 쳐보고 조판해보시오.
+\item \textbf{직접 해봐야 진전이 이루어질 수 있습니다!}
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Typesetting Text}
+\subsection{텍스트 조판하기}
 \begin{frame}[fragile]{\insertsubsection{}}
 \small
 \begin{itemize}
-\item Type your text between \cmdbegin{document} and \cmdend{document}.
-\item For the most part, you can just type your text normally.
+\item \cmdbegin{document} 와 \cmdend{document} 사이에 텍스트를 입력하십시오.
+\item 대부분의 경우 텍스트를 평소처럼 입력할 수 있습니다.
 \begin{exampletwouptiny}
-Words are separated by one or more
-spaces.
+단어들은 한개 또는 그 이상의 공백으로
+구분된다.
 
-Paragraphs are separated by one
-or more blank lines.
+문단들은 한개 또는 그 이상의 개행으로
+구분된다.
 \end{exampletwouptiny}
-\item Space in the source file is collapsed in the output.
+\item 코드 파일에서의 공백은 결과물에서 하나로 합쳐집니다.
 \begin{exampletwouptiny}
-The   rain       in Spain
-falls mainly on the plain.
+무궁화   삼천리   화려강산
+대한사람 대한으로 길이 보전하세
 \end{exampletwouptiny}
 \end{itemize}
 \end{frame}
@@ -166,25 +168,25 @@ falls mainly on the plain.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: Caveats}
+\begin{frame}[fragile]{\insertsubsection{}: 경고}
 \small
 \begin{itemize}
-\item Quotation marks are a bit tricky: use a backtick \keystroke{\`{}} on the left and an apostrophe \keystroke{\'{}} on the right.
+\item 따옴표는 쓰기가 약간 어렵습니다: 앞쪽은 backtick \keystroke{\`{}}을, 뒤쪽은 apostrophe \keystroke{\'{}} 을 써야 한다.
 \begin{exampletwouptiny}
-Single quotes: `text'.
+작은따옴표: `텍스트'.
 
-Double quotes: ``text''.
+큰따옴표: ``텍스트''.
 \end{exampletwouptiny}
 
-\item Some common characters have special meanings in \LaTeX:\\[1ex]
+\item 몇 개의 특수문자는 \LaTeX 의 예약어입니다:\\[1ex]
 \begin{tabular}{cl}
-\keystrokebftt{\%} & percent sign              \\
-\keystrokebftt{\#} & hash (pound / sharp) sign \\
+\keystrokebftt{\%} & 퍼센트 기호               \\
+\keystrokebftt{\#} & 샾(우물 정 자)            \\
 \keystrokebftt{\&} & ampersand                 \\
-\keystrokebftt{\$} & dollar sign               \\
+\keystrokebftt{\$} & 달러 기호                 \\
 \end{tabular}
-\item If you just type these, you'll get an error. If you want one to appear in
-the output, you have to \emph{escape} it by preceding it with a backslash.
+\item 이 기호들은 그대로 입력한다면 에러가 발생할 것이다. 이 기호들을 결과로써
+나타나게 하고 싶다면, 앞쪽에 backslash를 붙여서 \emph{escape} 해야 한다.
 \begin{exampletwoup}
 \$\%\&\#!
 \end{exampletwoup}
@@ -194,22 +196,24 @@ the output, you have to \emph{escape} it by preceding it with a backslash.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Handling Errors}
+\begin{frame}[fragile]{오류 손보기}
 \begin{itemize}
-\item \LaTeX{} can get confused when it is trying to compile your document. If
-it does, it stops with an error, which you must fix before it will produce
-any output.
-\item For example, if you misspell \cmdbs{emph} as \cmdbs{meph}, \LaTeX{} will
-stop with an ``undefined control sequence'' error, because ``meph'' is not
-one of the commands it knows.
+\item \LaTeX{} 은 문서를 조판하는 동안 혼란스러워(confused) 할 수 있다.
+만약 그럴 경우, 에러와 함께 조판이 중단된다. 이러한 에러는 반드시 결과물이 나오기 전에
+수정되어야만 한다.
+\item 예를 들어, \cmdbs{emph} 를 \cmdbs{meph} 로 잘못 쳤다면, \LaTeX{} 은
+``undefined control sequence'' 오류와 함께 멈출 것이다. ``meph'' 는 지정되지 않은
+명령어이기 때문이다.
 \end{itemize}
-\begin{block}{Advice on Errors}
+\begin{block}{오류에 관한 조언}
 \begin{enumerate}
-\item Don't panic! Errors happen.
-\item Fix them as soon as they arise --- if what you just typed caused an error,
-you can start your debugging there.
-\item If there are multiple errors, start with the first one --- the cause may
-even be above it.
+\item 당황할 것 없다. 오류 발생은 빈번할 것이다.
+\item 오류가 발생한다면, 그와 동시에 수정을 시작하라 --- 입력한 코드가 오류를
+야기한다면, 그 시점에서 디버깅을 시작하면 된다.
+\item 여러 개의 오류가 발생한다면, 우선 첫 번째 것부터 고쳐라 --- 오류 원인은
+한 곳에서 발생한 것일 수 있다.
+% TODO 어색한 번역일지도 모르겠습니다. 원문은 아래와 같으니, 더 나은 번역이 있다면 고쳐 주십시오.
+% If there are multiple errors, start with the first one --- the cause may even be above it.
 \end{enumerate}
 \end{block}
 \end{frame}
@@ -217,9 +221,10 @@ even be above it.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Typesetting Exercise 1}
+\begin{frame}[fragile]{연습문제 1 조판하기}
 
-\begin{block}{Typeset this in \LaTeX:
+\begin{block}{다음을 \LaTeX 으로 조판하시오:
+%TODO 한국어 번역본에 걸맞게 한국어로 된 위키백과 문서 중 따옴표, $, % 기호를 포함하는 부분을 찾아서 넣었으면 좋겠습니다.
 \footnote{\url{http://en.wikipedia.org/wiki/Economy_of_the_United_States}}}
 In March 2006, Congress raised that ceiling an additional \$0.79 trillion to
 \$8.97 trillion, which is approximately 68\% of GDP. As of October 4, 2008, the
@@ -229,40 +234,39 @@ to \$11.3 trillion.
 \vskip 2ex
 \begin{center}
 \fbox{\href{\wlnewdoc{basics-exercise-1.tex}}{%
-Click to open this exercise in \wllogo{}}}
+\wllogo{}에서 예시 문서를 열기 위해 이곳을 누르시오}}
 \end{center}
 
 \begin{itemize}
-\item Hint: watch out for characters with special meanings!
-\item Once you've tried,
+\item 힌트: 특수문자의 사용에 유의하십시오!
+\item 성공한 것 같다면,
 \fbox{\href{\wlnewdoc{basics-exercise-1-solution.tex}}{%
-click here to see my solution}}.
+나의 답을 보기 위해 여기를 클릭하라}}.
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Typesetting Mathematics}
-\begin{frame}[fragile]{\insertsubsection{}: Dollar Signs}
+\subsection{수식 조판하기}
+\begin{frame}[fragile]{\insertsubsection{}: 달러 기호}
 \begin{itemize}
-\item Why are dollar signs \keystrokebftt{\$} special? We use them to mark mathematics in text.\\[1ex]
+\item 달러 기호 \keystrokebftt{\$} 는 뭐가 그리 특별한가? 이것은 수식을 표시하기 위해 쓰인다.\\[1ex]
 \begin{exampletwouptiny}
-% not so good:
-Let a and b be distinct positive
-integers, and let c = a - b + 1.
+% 좋지 않은 예시:
+서로 다른 양의 정수 a, b에 대해
+c = a - b + 1 를 정의하자.
 
-% much better:
-Let $a$ and $b$ be distinct positive
-integers, and let $c = a - b + 1$.
+% 훨씬 좋은 예시:
+서로 다른 양의 정수 $a$, $b$에 대해
+$c = a - b + 1$ 를 정의하자.
 \end{exampletwouptiny}
-\item Always use dollar signs in pairs --- one to begin the mathematics, and one
-to end it.
-\item \LaTeX{} handles spacing automatically; it ignores your spaces.
+\item 달러 기호를 반드시 쌍으로 써야 한다 --- 하나는 수식을 열고, 다른 하나는 닫는 데에.
+\item \LaTeX{} 은 공백을 자동적으로 조절한다; 코드의 공백을 무시한다.
 \begin{exampletwouptiny}
-Let $y=mx+b$ be \ldots
+$y=mx+b$ 를 \ldots 와 같이 정의하자.
 
-Let $y = m x + b$ be \ldots
+$y = m x + b$ 를 \ldots 와 같이 정의하자.
 \end{exampletwouptiny}
 \end{itemize}
 \end{frame}
@@ -270,24 +274,23 @@ Let $y = m x + b$ be \ldots
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: Notation}
+\begin{frame}[fragile]{\insertsubsection{}: 표기 방법들}
 \begin{itemize}
-\item Use caret \keystrokebftt{\^} for superscripts and underscore \keystrokebftt{\_} for subscripts.
+\item 위첨자는 caret \keystrokebftt{\^} 을, 아래첨자는 underscore \keystrokebftt{\_} 를 사용하라.
 \begin{exampletwouptiny}
 $y = c_2 x^2 + c_1 x + c_0$
 \end{exampletwouptiny}
 \vskip 2ex
 
-\item Use curly braces \keystrokebftt{\{} \keystrokebftt{\}} to group
-superscripts and subscripts.
+\item 위첨자 또는 아래첨자를 묶기 위해 중괄호 \keystrokebftt{\{} \keystrokebftt{\}} 를 사용하라.
 \begin{exampletwouptiny}
-$F_n = F_n-1 + F_n-2$     % oops!
+$F_n = F_n-1 + F_n-2$     % 저런!
 
-$F_n = F_{n-1} + F_{n-2}$ % ok!
+$F_n = F_{n-1} + F_{n-2}$ % 옳지!
 \end{exampletwouptiny}
 \vskip 2ex
 
-\item There are commands for Greek letters and common notation.
+\item 그리스 문자나 각종 표기법을 표현하는 명령어도 있다.
 \begin{exampletwouptiny}
 $\mu = A e^{Q/RT}$
 
@@ -301,69 +304,66 @@ $\Omega = \sum_{k=1}^{n} \omega_k$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsubsection{}: Displayed Equations}
 \begin{itemize}
-\item If it's big and scary, \emph{display} it on its own line using
-\cmdbegin{equation} and \cmdend{equation}.\\[2ex]
+\item 만약 수식이 너무 크다면, \cmdbegin{equation} 와 \cmdend{equation}를 통해
+단독의 줄에 이를 \emph{display} 하라.\\[2ex]
 \begin{exampletwouptiny}
-The roots of a quadratic equation
-are given by
+$a$, $b$, 그리고 $c$ 가 \ldots 일 때,
+이차방정식의 근은
 \begin{equation}
 x = \frac{-b \pm \sqrt{b^2 - 4ac}}
          {2a}
 \end{equation}
-where $a$, $b$ and $c$ are \ldots
+와 같이 주어진다.
 \end{exampletwouptiny}
 \vskip 1em
-{\scriptsize Caution: \LaTeX{} mostly ignores your spaces in mathematics, but it
-can't handle blank lines in equations --- don't put blank lines in your
-mathematics.}
+{\scriptsize 주의: 웬만하면 \LaTeX{} 은 수식 코드에서의 공백은 무시하지만,
+빈 줄을 무시해내지는 못한다 --- 수식 코드에 빈 줄을 넣지 말아야 한다.}
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Interlude: Environments}
+\begin{frame}[fragile]{여담 : 환경(environments)}
 \begin{itemize}
-\item \bftt{equation} is an \emph{environment} --- a context.
-\item A command can produce different output in different contexts.
+\item \bftt{수식}은 \emph{환경}이다.
+\item 동일한 명령어도 환경에 따라 결과가 달라진다.
 \begin{exampletwouptiny}
-We can write
+우리는 텍스트에서는
 $ \Omega = \sum_{k=1}^{n} \omega_k $
-in text, or we can write
+와 같이 쓸 수 있고, 아니면
 \begin{equation}
   \Omega = \sum_{k=1}^{n} \omega_k
 \end{equation}
-to display it.
+와 같이 display할 수 있다.
 \end{exampletwouptiny}
 \vskip 2ex
-\item Note how the $\Sigma$ is bigger in the \bftt{equation} environment, and
-how the subscripts and superscripts change position, even though we used the
-same commands.
+\item 동일한 코드임에도 불구하고 $\Sigma$가 \bftt{equation} 환경에서 더 커진 것과, 
+위첨자 또는 아래첨자가 달라진 것에 대해 주목하라.
 \vskip 1em
-{\scriptsize In fact, we could have written \bftt{\$...\$} as
-\cmdbegin{math}\bftt{...}\cmdend{math}.}
+{\scriptsize 사실, 우리는 \bftt{\$...\$} 를
+\cmdbegin{math}\bftt{...}\cmdend{math}로 쓸 수도 있다.}
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Interlude: Environments}
+\begin{frame}[fragile]{여담 : 환경(environments)}
 \begin{itemize}
-\item The \cmdbs{begin} and \cmdbs{end} commands are used to create many
-different environments.
+\item \cmdbs{begin} 와 \cmdbs{end} 는 다양한 종류의 환경을 만들어내는 데에 사용된다.
 \vskip 2ex
 
-\item The \bftt{itemize} and \bftt{enumerate} environments generate lists.
+\item \bftt{itemize} 와 \bftt{enumerate} 환경은 목록을 만들어낼 때 사용된다.
 \begin{exampletwouptiny}
-\begin{itemize} % for bullet points
-\item Biscuits
-\item Tea
+\begin{itemize} % 점을 찍어서 나열
+\item 비스킷
+\item 차
 \end{itemize}
 
-\begin{enumerate} % for numbers
-\item Biscuits
-\item Tea
+\begin{enumerate} % 번호를 매겨서 나열
+\item 비스킷
+\item 차
 \end{enumerate}
 \end{exampletwouptiny}
 \end{itemize}
@@ -372,24 +372,23 @@ different environments.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Interlude: Packages}
+\begin{frame}[fragile]{여담: 패키지(packages)}
 
 \begin{itemize}
-\item All of the commands and environments we've used so far are built into
-\LaTeX.
+\item 그동안 우리가 써왔던 명령어 및 환경은 \LaTeX 으로 빌드된다.
 
-\item \emph{Packages} are libraries of extra commands and environments. There
-are thousands of freely available packages.
+\item \emph{패키지}는 이외의 명령어나 환경을 정의하는 라이브러리다.
+무료로 사용 가능한 수천 개의 패키지들이 공개되어 있다.
 
-\item We have to load each of the packages we want to use with a
-\cmdbs{usepackage} command in the \emph{preamble}.
+\item 이러한 패키지를 불러오기 위해서는, 우리는 \emph{preamble} 안에
+\cmdbs{usepackage} 명령어를 사용해야 한다.
 
-\item Example: \bftt{amsmath} from the American Mathematical Society.
+\item 예시: 미국수학회의 \bftt{amsmath}.
 \begin{minted}[fontsize=\small,frame=single]{latex}
 \documentclass{article}
 \usepackage{amsmath} % preamble
 \begin{document}
-% now we can use commands from amsmath here...
+% 이제 여기에 amsmath에 정의된 명령어를 사용할 수 있다.
 \end{document}
 \end{minted}
 \end{itemize}
@@ -398,26 +397,26 @@ are thousands of freely available packages.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: Examples with \bftt{amsmath}}
+\begin{frame}[fragile]{\insertsubsection{}: \bftt{amsmath}에 관한 예시}
 \begin{itemize}
-\item Use \bftt{equation*} (``equation-star'') for unnumbered equations.
+\item 번호가 없는 수식은 \bftt{equation*} (``equation-star'') 를 사용하라.
 \begin{exampletwouptiny}
 \begin{equation*}
   \Omega = \sum_{k=1}^{n} \omega_k
 \end{equation*}
 \end{exampletwouptiny}
-\item \LaTeX{} treats adjacent letters as variables multiplied together, which
-is not always what you want. \bftt{amsmath} defines commands for many common
+\item \LaTeX{} 은 인접한 문자들을 마치 변수들의 곱으로 취급하고, 이는 항상 옳지는 않다.
+\bftt{amsmath} 는 많은 종류의 수학적 연산자 및 표기법을 정의한다.
 mathematical operators.
 \begin{exampletwouptiny}
-\begin{equation*} % bad!
+\begin{equation*} % 안 좋은 예시!
  min_{x,y} (1-x)^2 + 100(y-x^2)^2
 \end{equation*}
-\begin{equation*} % good!
+\begin{equation*} % 좋은 예시!
 \min_{x,y}{(1-x)^2 + 100(y-x^2)^2}
 \end{equation*}
 \end{exampletwouptiny}
-\item You can use \cmdbs{operatorname} for others.
+\item 그 외의 경우 \cmdbs{operatorname} 를 사용할 수 있다.
 \begin{exampletwouptiny}
 \begin{equation*}
 \beta_i =
@@ -431,15 +430,15 @@ mathematical operators.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: Examples with \bftt{amsmath}}
+\begin{frame}[fragile]{\insertsubsection{}: \bftt{amsmath}에 관한 예시}
 \begin{itemize}{\small
-\item Align a sequence of equations at the equals sign
+\item 이어져 있는 등식들을 등호를 기준으로 정렬하려면
 \begin{align*}
 (x+1)^3 &= (x+1)(x+1)(x+1) \\
         &= (x+1)(x^2 + 2x + 1) \\
         &= x^3 + 3x^2 + 3x + 1
 \end{align*}
-with the \bftt{align*} environment.
+와 같이 \bftt{align*} 환경을 사용하라.
 
 % for whatever reason, this doesn't play well with the twoup environment
 \begin{minted}[fontsize=\small,frame=single]{latex}
@@ -449,10 +448,8 @@ with the \bftt{align*} environment.
         &= x^3 + 3x^2 + 3x + 1
 \end{align*}
 \end{minted}
-\item An ampersand \keystrokebftt{\&} separates the left column (before the
-$=$) from the right column (after the $=$).
-\item A double backslash \keystrokebftt{\bs}\keystrokebftt{\bs} starts a new
-line.
+\item Ampersand \keystrokebftt{\&} 는 왼쪽 열($=$ 이전)과 오른쪽 열($=$ 이후)를 구분짓는다.
+\item 두 개의 backslash \keystrokebftt{\bs}\keystrokebftt{\bs} 는 개행을 한다.
 }\end{itemize}
 \end{frame}
 
@@ -460,9 +457,9 @@ line.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Typesetting Exercise 2}
+\begin{frame}[fragile]{연습문제 2 조판하기}
 
-\begin{block}{Typeset this in \LaTeX:}
+\begin{block}{다음을 \LaTeX 으로 조판하시오:}
 Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically
 distributed random variables with $\operatorname{E}[X_i] = \mu$ and
 $\operatorname{Var}[X_i] = \sigma^2 < \infty$, and let
@@ -475,34 +472,33 @@ $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $N(0, \sigma^2)$.
 \vskip 2ex
 \begin{center}
 \fbox{\href{\wlnewdoc{basics-exercise-2.tex}}{%
-Click to open this exercise in \wllogo{}}}
+\wllogo{}에서 예시 문서를 열기 위해 이곳을 누르시오}}
 \end{center}
 \begin{itemize}
-\item Hint: the command for $\infty$ is \cmdbs{infty}.
-\item Once you've tried,
+\item 힌트: $\infty$ 를 나타내는 명령어는 \cmdbs{infty} 이다.
+\item 성공한 것 같다면,
 \fbox{\href{\wlnewdoc{basics-exercise-2-solution.tex}}{%
-click here to see my solution}}.
+나의 답을 보기 위해 여기를 클릭하라}}.
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{End of Part 1}
+\begin{frame}{제 1강의 끝}
 \begin{itemize}
-\item Congrats! You've already learned how to \ldots
+\item 축하합니다! 당신은 이제
 \begin{itemize}
-\item Typeset text in \LaTeX.
-\item Use lots of different commands.
-\item Handle errors when they arise.
-\item Typeset some beautiful mathematics.
-\item Use several different environments.
-\item Load packages.
+\item \LaTeX 으로 텍스트를 조판하고,
+\item 여러가지의 명령어를 사용하고,
+\item 오류가 발생할 때 그를 고치고,
+\item 깔끔한 수식을 조판하고,
+\item 여러가지의 환경을 사용하며,
+\item 패키지를 불러오는 것에 대해 알게 되었습니다.
 \end{itemize}
-\item That's amazing!
-\item In Part 2, we'll see how to use \LaTeX{} to write structured documents
-with sections, cross references, figures, tables and bibliographies. See you
-then!
+\item 금세 이렇게나 많이 했다니!
+\item 제 2강에서는, \LaTeX{}을 절(sections), cross references, 그림, 표, 그리고 참고문헌 등이 포함된
+구조적인 문서를 작성할 때 사용하는 방법을 배울 것입니다. 그 때 만나요!
 \end{itemize}
 \end{frame}
 
