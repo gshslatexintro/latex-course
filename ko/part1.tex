@@ -47,14 +47,14 @@
 \end{itemize}
 \vskip 2ex
 \begin{center}
-\begin{minted}[frame=single]{latex}
-동해물과 백두산이 \emph{마르고} 닳도록
-\end{minted}
-\vskip 2ex
-\tikz\node[single arrow,fill=gray,font=\ttfamily\bfseries,%
-  rotate=270,xshift=-1em]{latex};
-\vskip 2ex
-\fbox{동해물과 백두산이 \emph{마르고} 닳도록}
+	\begin{minted}[frame=single]{latex}
+	The rain in Spain falls \emph{mainly} on the plain.
+	\end{minted}
+	\vskip 2ex
+	\tikz\node[single arrow,fill=gray,font=\ttfamily\bfseries,%
+	rotate=270,xshift=-1em]{latex};
+	\vskip 2ex
+	\fbox{The rain in Spain falls \emph{mainly} on the plain.}
 \end{center}
 \end{frame}
 
@@ -64,9 +64,9 @@
 \begin{frame}[fragile]{명령어와 결과물에 관한 또 다른 예시들\ldots}
 \begin{exampletwoup}
 \begin{itemize}
-\item 차
-\item 우유
-\item 비스킷
+	\item Tea
+	\item Milk
+	\item Biscuits
 \end{itemize}
 \end{exampletwoup}
 \vskip 2ex
@@ -151,16 +151,16 @@
 \item \cmdbegin{document} 와 \cmdend{document} 사이에 텍스트를 입력하십시오.
 \item 대부분의 경우 텍스트를 평소처럼 입력할 수 있습니다.
 \begin{exampletwouptiny}
-단어들은 한개 또는 그 이상의 공백으로
-구분된다.
-
-문단들은 한개 또는 그 이상의 개행으로
-구분된다.
+	Words are separated by one or more
+	spaces.
+	
+	Paragraphs are separated by one
+	or more blank lines.
 \end{exampletwouptiny}
 \item 코드 파일에서의 공백은 결과물에서 하나로 합쳐집니다.
 \begin{exampletwouptiny}
-무궁화   삼천리   화려강산
-대한사람 대한으로 길이 보전하세
+	The   rain       in Spain
+	falls mainly on the plain.
 \end{exampletwouptiny}
 \end{itemize}
 \end{frame}
@@ -173,9 +173,9 @@
 \begin{itemize}
 \item 따옴표는 쓰기가 약간 어렵습니다: 앞쪽은 backtick \keystroke{\`{}}을, 뒤쪽은 apostrophe \keystroke{\'{}} 을 써야 한다.
 \begin{exampletwouptiny}
-작은따옴표: `텍스트'.
-
-큰따옴표: ``텍스트''.
+	Single quotes: `text'.
+	
+	Double quotes: ``text''.
 \end{exampletwouptiny}
 
 \item 몇 개의 특수문자는 \LaTeX 의 예약어입니다:\\[1ex]
@@ -253,20 +253,20 @@ to \$11.3 trillion.
 \begin{itemize}
 \item 달러 기호 \keystrokebftt{\$} 는 뭐가 그리 특별한가? 이것은 수식을 표시하기 위해 쓰인다.\\[1ex]
 \begin{exampletwouptiny}
-% 좋지 않은 예시:
-서로 다른 양의 정수 a, b에 대해
-c = a - b + 1 를 정의하자.
-
-% 훨씬 좋은 예시:
-서로 다른 양의 정수 $a$, $b$에 대해
-$c = a - b + 1$ 를 정의하자.
+	% not so good:
+	Let a and b be distinct positive
+	integers, and let c = a - b + 1.
+	
+	% much better:
+	Let $a$ and $b$ be distinct positive
+	integers, and let $c = a - b + 1$.
 \end{exampletwouptiny}
 \item 달러 기호를 반드시 쌍으로 써야 한다 --- 하나는 수식을 열고, 다른 하나는 닫는 데에.
 \item \LaTeX{} 은 공백을 자동적으로 조절한다; 코드의 공백을 무시한다.
 \begin{exampletwouptiny}
-$y=mx+b$ 를 \ldots 와 같이 정의하자.
-
-$y = m x + b$ 를 \ldots 와 같이 정의하자.
+	Let $y=mx+b$ be \ldots
+	
+	Let $y = m x + b$ be \ldots
 \end{exampletwouptiny}
 \end{itemize}
 \end{frame}
@@ -284,9 +284,9 @@ $y = c_2 x^2 + c_1 x + c_0$
 
 \item 위첨자 또는 아래첨자를 묶기 위해 중괄호 \keystrokebftt{\{} \keystrokebftt{\}} 를 사용하라.
 \begin{exampletwouptiny}
-$F_n = F_n-1 + F_n-2$     % 저런!
+$F_n = F_n-1 + F_n-2$     % Oops!
 
-$F_n = F_{n-1} + F_{n-2}$ % 옳지!
+$F_n = F_{n-1} + F_{n-2}$ % ok!
 \end{exampletwouptiny}
 \vskip 2ex
 
@@ -307,13 +307,13 @@ $\Omega = \sum_{k=1}^{n} \omega_k$
 \item 만약 수식이 너무 크다면, \cmdbegin{equation} 와 \cmdend{equation}를 통해
 단독의 줄에 이를 \emph{display} 하라.\\[2ex]
 \begin{exampletwouptiny}
-$a$, $b$, 그리고 $c$ 가 \ldots 일 때,
-이차방정식의 근은
-\begin{equation}
-x = \frac{-b \pm \sqrt{b^2 - 4ac}}
-         {2a}
-\end{equation}
-와 같이 주어진다.
+	The roots of a quadratic equation
+	are given by
+	\begin{equation}
+	x = \frac{-b \pm \sqrt{b^2 - 4ac}}
+	{2a}
+	\end{equation}
+	where $a$, $b$ and $c$ are \ldots
 \end{exampletwouptiny}
 \vskip 1em
 {\scriptsize 주의: 웬만하면 \LaTeX{} 은 수식 코드에서의 공백은 무시하지만,
@@ -329,13 +329,13 @@ x = \frac{-b \pm \sqrt{b^2 - 4ac}}
 \item \bftt{수식}은 \emph{환경}이다.
 \item 동일한 명령어도 환경에 따라 결과가 달라진다.
 \begin{exampletwouptiny}
-우리는 텍스트에서는
-$ \Omega = \sum_{k=1}^{n} \omega_k $
-와 같이 쓸 수 있고, 아니면
-\begin{equation}
-  \Omega = \sum_{k=1}^{n} \omega_k
-\end{equation}
-와 같이 display할 수 있다.
+	We can write
+	$ \Omega = \sum_{k=1}^{n} \omega_k $
+	in text, or we can write
+	\begin{equation}
+	\Omega = \sum_{k=1}^{n} \omega_k
+	\end{equation}
+	to display it.
 \end{exampletwouptiny}
 \vskip 2ex
 \item 동일한 코드임에도 불구하고 $\Sigma$가 \bftt{equation} 환경에서 더 커진 것과, 
@@ -356,15 +356,15 @@ $ \Omega = \sum_{k=1}^{n} \omega_k $
 
 \item \bftt{itemize} 와 \bftt{enumerate} 환경은 목록을 만들어낼 때 사용된다.
 \begin{exampletwouptiny}
-\begin{itemize} % 점을 찍어서 나열
-\item 비스킷
-\item 차
-\end{itemize}
-
-\begin{enumerate} % 번호를 매겨서 나열
-\item 비스킷
-\item 차
-\end{enumerate}
+	\begin{itemize} % for bullet points
+		\item Biscuits
+		\item Tea
+	\end{itemize}
+	
+	\begin{enumerate} % for numbers
+		\item Biscuits
+		\item Tea
+	\end{enumerate}
 \end{exampletwouptiny}
 \end{itemize}
 \end{frame}
@@ -388,7 +388,7 @@ $ \Omega = \sum_{k=1}^{n} \omega_k $
 \documentclass{article}
 \usepackage{amsmath} % preamble
 \begin{document}
-% 이제 여기에 amsmath에 정의된 명령어를 사용할 수 있다.
+% now we can use commands from amsmath here...
 \end{document}
 \end{minted}
 \end{itemize}
@@ -409,12 +409,12 @@ $ \Omega = \sum_{k=1}^{n} \omega_k $
 \bftt{amsmath} 는 많은 종류의 수학적 연산자 및 표기법을 정의한다.
 mathematical operators.
 \begin{exampletwouptiny}
-\begin{equation*} % 안 좋은 예시!
- min_{x,y} (1-x)^2 + 100(y-x^2)^2
-\end{equation*}
-\begin{equation*} % 좋은 예시!
-\min_{x,y}{(1-x)^2 + 100(y-x^2)^2}
-\end{equation*}
+	\begin{equation*} % bad!
+	min_{x,y} (1-x)^2 + 100(y-x^2)^2
+	\end{equation*}
+	\begin{equation*} % good!
+	\min_{x,y}{(1-x)^2 + 100(y-x^2)^2}
+	\end{equation*}
 \end{exampletwouptiny}
 \item 그 외의 경우 \cmdbs{operatorname} 를 사용할 수 있다.
 \begin{exampletwouptiny}
