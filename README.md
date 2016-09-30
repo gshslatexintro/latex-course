@@ -63,3 +63,4 @@ Credits
 * Sana A -- pointed out an error in part 1
 * Andy Roberts -- the chick(en) image is from [one of his articles](http://www.andy-roberts.net/writing/latex/importing_images)
 * Ruby Trinh -- for organising the original short courses
+* [gshslatexintro](https://github.com/gshslatexintro) -- for translating slides into Korean language
