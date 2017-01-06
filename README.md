@@ -1,5 +1,11 @@
-latex-course
+latex-course-ko
 ============
+> Korean Translation of [jdleesmiller/latex-course](https://github.com/jdleesmiller/latex-course)
+
+- [x] Part 1 translation
+- [ ] Part 2 translation
+- [ ] Part 3 translation
+
 
 Slides for an introductory course on LaTeX. The slides and their LaTeX source
 code are provided in [this github repository](https://github.com/jdleesmiller/latex-course) under a permissive MIT license.
